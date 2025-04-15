@@ -35,9 +35,8 @@ cd seurepositorio
 
 Crie um arquivo `.env` com o seguinte conteúdo:
 ```
-SUPABASE_URL = "https://btybgwekklpapttcmdlq.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ0eWJnd2Vra2xwYXB0dGNtZGxxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM1NDk5NTYsImV4cCI6MjA1OTEyNTk1Nn0.5Rf5EC6CeRGHVXJosyXeZQl_UXs1wH31hebWmwoee04"
-
+SUPABASE_URL=https://<sua-instancia>.supabase.co
+SUPABASE_KEY=sua-service-role-key
 ```
 
 ### 3. Instale as dependências
