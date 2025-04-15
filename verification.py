@@ -13,7 +13,7 @@ if not SUPABASE_URL or not SUPABASE_KEY:
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def run_verification_queries():
-    print("✅ Iniciando verificação de consistência dos dados...")
+    print("Iniciando verificação de consistência dos dados...")
 
     # 1. Alunos devem estar vinculados a cursos válidos
     query_1 = """
@@ -24,9 +24,9 @@ def run_verification_queries():
     """
     res1 = supabase.rpc("run_sql", {"query": query_1}).execute()
     if res1.data:
-        print("⚠️ Alunos sem curso válido:", res1.data)
+        print("Alunos sem curso válido:", res1.data)
     else:
-        print("✅ Todos os alunos possuem curso válido.")
+        print("Todos os alunos possuem curso válido.")
 
     # 2. Histórico escolar deve ter disciplinas e alunos válidos
     query_2 = """
@@ -38,9 +38,9 @@ def run_verification_queries():
     """
     res2 = supabase.rpc("run_sql", {"query": query_2}).execute()
     if res2.data:
-        print("⚠️ Registros inválidos no histórico escolar:", res2.data)
+        print("Registros inválidos no histórico escolar:", res2.data)
     else:
-        print("✅ Histórico escolar está consistente.")
+        print("Histórico escolar está consistente.")
 
     # 3. TCCs devem possuir orientadores válidos
     query_3 = """
@@ -51,9 +51,9 @@ def run_verification_queries():
     """
     res3 = supabase.rpc("run_sql", {"query": query_3}).execute()
     if res3.data:
-        print("⚠️ TCCs com orientadores inexistentes:", res3.data)
+        print("TCCs com orientadores inexistentes:", res3.data)
     else:
-        print("✅ Todos os TCCs possuem orientadores válidos.")
+        print("Todos os TCCs possuem orientadores válidos.")
 
     # 4. Vínculos TCC-Aluno devem ser consistentes
     query_4 = """
@@ -65,11 +65,11 @@ def run_verification_queries():
     """
     res4 = supabase.rpc("run_sql", {"query": query_4}).execute()
     if res4.data:
-        print("⚠️ Relações TCC-Aluno inválidas:", res4.data)
+        print("Relações TCC-Aluno inválidas:", res4.data)
     else:
-        print("✅ Todos os vínculos TCC-Aluno estão corretos.")
+        print("Todos os vínculos TCC-Aluno estão corretos.")
 
-    print("🔍 Verificação de consistência concluída.")
+    print("Verificação de consistência concluída.")
 
 if __name__ == "__main__":
     run_verification_queries()
