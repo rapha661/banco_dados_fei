@@ -5,7 +5,7 @@
 
 | Nome              | RA           |
 |-------------------|--------------|
-| Raphael Garavati  | XX.XXX.XXX-X |
+| Raphael Garavati  | 22.123.014-7 |
 | Nathan Gabriel    | 22.123.028-7 |
 | Ana Carolina      | 22.123.001-4 |
 
