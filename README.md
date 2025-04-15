@@ -1,36 +1,79 @@
-# 📚 Projeto 1 – Banco de Dados para uma Universidade
 
+# Projeto de Banco de Dados - Sistema Universitário
 
-## 👥 Integrantes do Projeto
+## Integrantes do Grupo
 
-| Nome              | RA           |
-|-------------------|--------------|
-| Raphael Garavati  | 22.123.014-7 |
-| Nathan Gabriel    | 22.123.028-7 |
-| Ana Carolina      | 22.123.001-4 |
+- **Raphael Garavati Erbert** – RA: *[22.123.014-7]*
+- **Nathan Gabriel da Fonseca Leite** – RA: *[22.123.028-7]*
+- **Ana Carolina Lazzuri** – RA: *[22.123.001-4]*
 
+---
 
-## 📌 Descrição
+## Descrição do Projeto
 
-O projeto **"Banco de Dados para uma Universidade"** tem como objetivo a criação e implementação de um sistema de banco de dados que atenda às necessidades de gerenciamento acadêmico e administrativo de uma universidade.
+Este projeto consiste no desenvolvimento de um sistema de banco de dados relacional para simular a estrutura de uma universidade. O sistema permite armazenar e consultar dados de:
 
-Esse sistema será capaz de armazenar e gerenciar informações relacionadas a:
+- Professores e suas disciplinas
+- Alunos e seu histórico escolar
+- Cursos, departamentos e matrizes curriculares
+- Trabalhos de Conclusão de Curso (TCC)
+- Salas de aula e distribuição de disciplinas
 
-- Alunos  
-- Professores  
-- Departamentos  
-- Cursos  
-- Disciplinas  
-- Históricos escolares de alunos  
-- Disciplinas lecionadas por professores  
-- Trabalhos de Conclusão de Curso (TCCs), incluindo os grupos de alunos e seus respectivos orientadores
+O banco de dados foi modelado com base em requisitos realistas e implementado no Supabase utilizando PostgreSQL.
 
-## ▶️ Como Executar 
+---
 
-## 📸 Diagramas
+## Como Executar o Projeto
 
-![Diagrama MER](diagramas/MER.png)
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seuusuario/seurepositorio.git
+cd seurepositorio
+```
+
+### 2. Configure as variáveis de ambiente
+
+Crie um arquivo `.env` com o seguinte conteúdo:
+```
+SUPABASE_URL=https://<sua-instancia>.supabase.co
+SUPABASE_KEY=sua-service-role-key
+```
+
+### 3. Instale as dependências
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Execute os scripts do projeto
+
+#### Popule o banco de dados com dados de exemplo:
+```bash
+python insert.py
+```
+
+#### Verifique a consistência dos dados inseridos:
+```bash
+python verification.py
+```
+
+#### Execute as queries solicitadas:
+```bash
+python teste_query.py
+```
+
+> Os arquivos estão organizados da seguinte forma:
+> - `insert.py`: insere dados fictícios nas tabelas
+> - `verification.py`: realiza verificações de consistência no banco
+> - `teste_query.py`: executa 5 queries do enunciado + 10 queries adicionais
+
+---
+
+## Modelo Relacional (MR)
 
 ![Diagrama MR](diagramas/MR_v2.png)
 
+---
 
+## Modelo Entidade-Relacionamento (MER)
+
+![Diagrama MER](diagramas/MER.png)
