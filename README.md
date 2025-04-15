@@ -31,4 +31,6 @@ Esse sistema será capaz de armazenar e gerenciar informações relacionadas a:
 
 ![Diagrama MER](diagramas/MER.png)
 
+![Diagrama MR](diagramas/MR_v2.png)
+
 
