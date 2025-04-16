@@ -197,10 +197,10 @@ python teste_query.py
 
 ## Modelo Relacional (MR)
 
-![Diagrama MR](diagramas/MR_v2.png)
+![Diagrama MR](diagramas/diagramaMR.png)
 
 ---
 
 ## Modelo Entidade-Relacionamento (MER)
 
-![Diagrama MER](diagramas/MER.png)
+![Diagrama MER](diagramas/MR_v2.png)
